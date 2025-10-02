@@ -35,7 +35,7 @@ void updateMouseCollider() {
 
 void attractLettersToCenter() {
   Vec2 centerWorld = box2d.coordPixelsToWorld(width / 2f, height / 2f);
-  float k = 6.0f;
+  float k = 50.0f;
   for (LetterBody lb : letters) {
     Vec2 toCenter = centerWorld.sub(lb.body.getPosition().clone());
     lb.body.applyForceToCenter(toCenter.mul(k));

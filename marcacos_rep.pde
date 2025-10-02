@@ -14,7 +14,7 @@ ArrayList<LetterBody> activeSentence = new ArrayList<LetterBody>();
 boolean draggingSentence = false;
 
 Body mouseBody;
-float mouseRadius = 2.0f;
+float mouseRadius = 4.0f;
 PVector prevMouseWorld = new PVector();
 
 float bboxFineTune = 0.95;
@@ -32,7 +32,7 @@ float wordSpacingFactor = 0.5;
 
 String[] sentencesPool = {
   "Hello world",
-  "Processing is fun",
+  "Processing is fun.",
   "Typography is fun",
   "marcacos is fun"
 };
@@ -46,15 +46,15 @@ void setup() {
   initializeSentences();
   initializeFont();
   loadLetterBoxesJSON("letter_boxes.json");
-
   initializePhysics();
   rectMode(CENTER);
   noStroke();
+  drawInitialLetters(100);
 }
 
 void draw() {
   background(0);
-
+  
   updateMouseCollider();
 
   if (draggingSentence && !activeSentence.isEmpty()) {
