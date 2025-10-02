@@ -17,12 +17,21 @@ class LetterBody {
     this.localVertsPx = vertsPx;
     this.textSizePx = textSizePx;
   }
-
+  
+  char getValue(){
+    return ch;
+  }
+  
   void setWhiteInstant() {
     col = 255;
     targetCol = 255;
   }
-
+  
+  void setGrayInstant() {
+    col = 49;
+    targetCol = 49;
+  }
+  
   void fadeToGray() {
     targetCol = 49;
   }

@@ -71,4 +71,8 @@ void draw() {
   updateLetterColors();
   renderLetters();
   updateActiveSentenceGathering();
+  /*
+  for(int i=0; i<letters.size(); i++){
+    print(letters.get(i).getValue());
+  }*/
 }
