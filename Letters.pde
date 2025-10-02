@@ -148,7 +148,7 @@ LetterBody addLetter(char c, float xPx, float yPx, boolean kinematic, float cust
     b.createFixture(fd);
   }
 
-  b.setLinearDamping(0.9f);
+  b.setLinearDamping(0.3f);
   b.setAngularDamping(0.9f);
 
   float textSizePx = baseTextSizePx * 0.9f;
